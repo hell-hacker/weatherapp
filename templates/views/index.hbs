@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/weathe.css">
+    <script>
+        function fun() {
+            const value = document.getElementById('input').value;
+            const url = 'http://localhost:3000/weather?place=' + value;
+            fetch(url).then((res) => {
+                res.json().then((data) => {
+                    console.log(data);
+                    if (data.error) {
+                        document.getElementById('desc').innerHTML = "please enter a valid loaction";
+                        console.log("please enter a valid")
+                    }
+                    else {
+                        console.log(data.temperature);
+                        console.log(data.location);
+
+                        document.getElementById('desc').innerHTML = data.location.name + " , " + data.location.country + " , " + data.temperature + ' , ' + data.desc;
+                    }
+                })
+            }
+            )
+        }
+    </script>
+</head>
+
+<body></body>
+<h1 id="h1">Weather</h1>
+<input id="input" type="text">
+<button onclick="fun()" type="submit">submit</button>
+<p id="desc"></p>
+</body>
+
+</html>
