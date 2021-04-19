@@ -9,7 +9,7 @@
     <script>
         function fun() {
             const value = document.getElementById('input').value;
-            const url = 'http://localhost:3000/weather?place=' + value;
+            const url = 'https://ra-weath-app.herokuapp.com/weather?place=' + value;
             fetch(url).then((res) => {
                 res.json().then((data) => {
                     console.log(data);
