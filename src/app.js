@@ -1,7 +1,7 @@
 const express=require('express');
 //const forcast=require('./weather-app/utils/app.js')
-const geocode=require('../weather-app/utils/geocode.js');
-const forcast=require('../weather-app/utils/forcast.js');
+const geocode=require('./utils/geocode.js');
+const forcast=require('./utils/forcast.js');
 const path=require('path');
 const hbs=require('hbs');
 const app=express();
