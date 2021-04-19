@@ -48,6 +48,6 @@ console.log(publicpath);
 app.get('*',(req,res)=>{
     res.send("<h1>404 Error Page Not found</h1>")
 })
-app.listen(3000,()=>{
+app.listen(process.env.PORT||3000,()=>{
      console.log("Your code is working");
  })

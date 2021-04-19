@@ -5,9 +5,10 @@ body{
         
 }
 #h1{
-    font-size: 80px;
+    font-size: 458%;
     text-align: center;
     color: rgb(7, 209, 245);
+    margin: 0px;
 }
 button{
     height: 32px;
@@ -15,10 +16,10 @@ button{
     font-size: 20px;
     background: linear-gradient( 
 172deg
- , #1aa6c6, #0ae110);
+ , #02fff3, #1a516c);
     border: none;
     border-radius: 10px;
-    color: #8601ff;
+    color: #ff0118;
     outline: none;
     margin-top: 23px;
     margin-left: 111px;
